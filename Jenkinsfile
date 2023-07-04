@@ -11,8 +11,8 @@ pipeline {
   agent any
   
    environment {
-    AZURE_SUBSCRIPTION_ID = '79fbf3cc-259d-457c-bc08-b52560e2f0a6'
-    AZURE_TENANT_ID = 'efce57aa-4ecc-4454-8451-82234c9c49c4'
+    AZURE_SUBSCRIPTION_ID = '241c9c7e-bc3c-422d-8d26-d98f880c325d'
+    AZURE_TENANT_ID = '478494c2-b7c6-468f-9224-c302037dbb7c'
   }
   
   stages {
@@ -31,8 +31,8 @@ pipeline {
     stage('deploy') {
       steps {
         script {
-           def resourceGroup = 'deployments_group'
-          def webAppName = 'deployments'
+           def resourceGroup = 'workshopAppSer_group'
+          def webAppName = 'workshopAppSer'
           
           // login Azure
           withCredentials([azureServicePrincipal('azuredeploy')]) { 
